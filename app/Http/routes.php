@@ -36,6 +36,9 @@ Route::get('/update', function () {
 	$photo->save();
 });
 
-
+Route::get('/delete', function () {
+	$staff = Staff::findorFail(1);
+	$staff->photos()->delete();
+});
 
 
